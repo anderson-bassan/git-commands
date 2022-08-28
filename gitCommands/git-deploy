@@ -1,0 +1,20 @@
+#! /bin/bash
+
+if [ ! -z "$1" ]
+	then
+
+		git add .
+		git commit -m "$1"
+
+		if [ ! -z "$2" ]
+			then
+				git tag -a "$2" -m "$1"
+		fi
+
+		git push
+
+		if [ ! -z "$2" ]
+			then
+				git push --tags
+		fi
+fi
