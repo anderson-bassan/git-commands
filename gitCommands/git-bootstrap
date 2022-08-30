@@ -1,0 +1,19 @@
+#! /bin/bash
+
+git init
+git add .
+
+if [ ! -z "$1" ]
+	then
+		git commit -m "$1"
+
+	else
+		git commit
+fi
+
+if [ ! -z "$2" ]
+	then
+		git remote add origin "$2"
+fi
+
+git push -u origin master
