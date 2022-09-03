@@ -1,0 +1,5 @@
+#! /bin/bash
+
+# python pwd + updatePOM.py
+dir=$(dirname -- "$0";)
+python $dir/updatePOM.py
